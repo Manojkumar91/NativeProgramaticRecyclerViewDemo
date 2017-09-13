@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:id="@+id/rl_1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmx_blog"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Your app monetization is now even more secure with the latest VMAX SDK"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Tuesday March 21st, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_below="@id/rl_1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img1"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog2"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Get a deeper understanding of your app monetization with our enhanced analytics"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Wednesday March 1st, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_below="@id/rl_2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img3"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog3"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Introducing the VMAX Super-Ant, our brand mascot"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Wednesday Feb 22nd, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+           <!--Ad Container-->
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/frame_xml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--XML load Container-->
+                <FrameLayout
+
+                    android:id="@+id/banner_adview"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    />
+            </LinearLayout>
+            <!--Ad Container-->
+
+
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_below="@id/rl_3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img4"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog4"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Deliver an enhanced ad experience with Rewarded Interstitial ads"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Tuesday Feb 14th, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_5"
+                android:layout_below="@id/rl_4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img5"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog5"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="App store trends are your first step to market research for your app idea
+"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Tuesday Feb 14th, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_6"
+                android:layout_below="@id/rl_5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img6"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog6"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Get more creative with your photo uploads with Giddylizer"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Tuesday Jan 5th, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_7"
+                android:layout_below="@id/rl_6"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/img7"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+
+
+                        android:src="@drawable/vmax_blog7"
+                        android:layout_width="140dp"
+                        android:layout_height="86dp" />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/img7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:text="Good App User Experience + Right Ad Experience = Successful App Monetization"
+                        android:layout_margin="3dp"
+                        android:textSize="14dp"
+                        android:textColor="@color/initial_font_gotham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:text="Wednesday Dec 5th, 2017 | Blog, Product"
+                        android:layout_margin="3dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:textStyle="italic"
+                        android:text="by VMAX"
+                        android:layout_margin="3dp"
+                        android:textSize="16px"
+                        android:textColor="@color/blog_descp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
