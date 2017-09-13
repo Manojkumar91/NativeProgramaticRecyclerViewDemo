@@ -57,6 +57,7 @@ public class MainActivity extends Activity {
 
         RelativeLayout customNativeAdContainer=(RelativeLayout) LayoutInflater.from(this).inflate(R.layout.vmax_custom_native_layout,null);
         vmaxAdView.setCustomNativeAdContainer(customNativeAdContainer);
+        vmaxAdView.setCompositeAdSize(300,250);
         vmaxAdView.cacheAd();
 
 
