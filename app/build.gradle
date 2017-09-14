@@ -5,6 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.vmax.demo.nativeCSRecycler"
+
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
