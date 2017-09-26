@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.vmax.android.ads.api.VmaxAdView;
@@ -31,10 +33,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         layoutInflater=(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        vmaxAdView=new VmaxAdView(this,"9060b6e3",VmaxAdView.UX_NATIVE);
+        vmaxAdView= new VmaxAdView(this,"9060b6e3",VmaxAdView.UX_NATIVE);
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
+
                 vmaxAdView.showAd();
                 InitializeRecycler();
             }
@@ -42,6 +45,7 @@ public class MainActivity extends Activity {
             @Override
             public void onAdError(VmaxAdError vmaxAdError) {
 
+                InitializeRecycler();
             }
 
             @Override
@@ -54,10 +58,7 @@ public class MainActivity extends Activity {
 
             }
         });
-
-        RelativeLayout customNativeAdContainer=(RelativeLayout) LayoutInflater.from(this).inflate(R.layout.vmax_custom_native_layout,null);
-        vmaxAdView.setCustomNativeAdContainer(customNativeAdContainer);
-        vmaxAdView.setCompositeAdSize(300,250);
+        vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
         vmaxAdView.cacheAd();
 
 
@@ -85,7 +86,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         if (vmaxAdView != null) {
-       /** To Destroy vmaxAdView when Activity Is No Longer Available  */
+            /** To Destroy vmaxAdView when Activity Is No Longer Available  */
             vmaxAdView.onDestroy();
         }
         super.onDestroy();

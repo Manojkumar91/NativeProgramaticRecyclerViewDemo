@@ -25,7 +25,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
     public RecycleAdapter( ArrayList<BlogModel> list,VmaxAdView vmaxAdView)
     {
         blogList=list;
-       theAd=vmaxAdView;
+        theAd=vmaxAdView;
 
     }
 
@@ -33,10 +33,10 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
     {
         ImageView blogImage;
         TextView mainTitle,date,author;
-         public TheViewHolder(View v,int position)
+        public TheViewHolder(View v,int position)
         {
             super(v);
-            if(position!=4) {
+            if(position%10!=0||position==0) {
 
                 blogImage = (ImageView) v.findViewById(R.id.blog_img);
                 mainTitle = (TextView) v.findViewById(R.id.blog_title);
@@ -55,9 +55,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
 
         View view;
 
-        if(viewType==4&&theAd!=null){
+        if(viewType%10==0&&viewType!=0&&theAd!=null){
 
-        view=theAd;
+            view=theAd;
         }
         else
         {
@@ -75,14 +75,14 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
     @Override
     public void onBindViewHolder(TheViewHolder holder, int position) {
 
-       if(position!=4)
-       {
-           Log.e("position",String.valueOf(position));
-           holder.blogImage.setImageDrawable(blogList.get(position).getBlogImage());
-           holder.author.setText(blogList.get(position).getAuthor());
-           holder.date.setText(blogList.get(position).getDate());
-           holder.mainTitle.setText(blogList.get(position).getTitle());
-       }
+        if(position%10!=0||position==0)
+        {
+            Log.e("position",String.valueOf(position));
+            holder.blogImage.setImageDrawable(blogList.get(position).getBlogImage());
+            holder.author.setText(blogList.get(position).getAuthor());
+            holder.date.setText(blogList.get(position).getDate());
+            holder.mainTitle.setText(blogList.get(position).getTitle());
+        }
     }
 
     @Override
