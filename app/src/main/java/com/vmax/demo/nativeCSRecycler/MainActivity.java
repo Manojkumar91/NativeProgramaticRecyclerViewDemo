@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
-
+                vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
                 vmaxAdView.showAd();
                 InitializeRecycler();
             }
@@ -58,7 +58,6 @@ public class MainActivity extends Activity {
 
             }
         });
-        vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
         vmaxAdView.cacheAd();
 
 
