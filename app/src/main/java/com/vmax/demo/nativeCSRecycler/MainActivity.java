@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
-
 import com.vmax.android.ads.api.VmaxAdView;
 import com.vmax.android.ads.common.VmaxAdListener;
 import com.vmax.android.ads.exception.VmaxAdError;
@@ -37,6 +34,15 @@ public class MainActivity extends Activity {
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
+                vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
+               /** Minimum requirements for AdMob templates(wxh dp)
+                Small:  280x80
+                Medium: 280x132
+                Large:  280x250
+                Maxmium limits for AdMob templates(wxh dp)
+                Small:  1200x612
+                Medium: 1200x1200
+                Large:  1200x1200*/
 
                 vmaxAdView.showAd();
                 InitializeRecycler();
@@ -58,7 +64,7 @@ public class MainActivity extends Activity {
 
             }
         });
-        vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
+
         vmaxAdView.cacheAd();
 
 
