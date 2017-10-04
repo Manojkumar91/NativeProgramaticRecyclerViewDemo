@@ -35,7 +35,8 @@ public class MainActivity extends Activity {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
                 vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
-               /** Minimum requirements for AdMob templates(wxh dp)
+
+                /** Minimum requirements for AdMob templates(wxh dp)
                 Small:  280x80
                 Medium: 280x132
                 Large:  280x250
