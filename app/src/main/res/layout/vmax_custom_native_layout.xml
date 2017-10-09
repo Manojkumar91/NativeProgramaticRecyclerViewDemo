@@ -9,6 +9,7 @@
     android:layout_gravity="center"
     android:id="@+id/adView"
     android:paddingBottom="10dp"
+    android:visibility="gone"
     >
 
 

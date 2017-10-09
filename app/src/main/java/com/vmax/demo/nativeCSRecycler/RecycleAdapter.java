@@ -22,6 +22,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
 
     ArrayList<BlogModel> blogList;
     VmaxAdView theAd;
+
+
     public RecycleAdapter( ArrayList<BlogModel> list,VmaxAdView vmaxAdView)
     {
         blogList=list;

@@ -24,6 +24,8 @@ public class MainActivity extends Activity {
     LayoutInflater layoutInflater;
     RecyclerView recyclerView;
     VmaxAdView vmaxAdView;
+   Context c;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class MainActivity extends Activity {
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
-                vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
+
 
                 /** Minimum requirements for AdMob templates(wxh dp)
                 Small:  280x80
@@ -45,14 +47,14 @@ public class MainActivity extends Activity {
                 Medium: 1200x1200
                 Large:  1200x1200*/
 
-                vmaxAdView.showAd();
+
                 InitializeRecycler();
             }
 
             @Override
             public void onAdError(VmaxAdError vmaxAdError) {
 
-                InitializeRecycler();
+
             }
 
             @Override
@@ -65,9 +67,12 @@ public class MainActivity extends Activity {
 
             }
         });
+        vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
+        vmaxAdView.setMediaExpandControlVisibility(false);
+        vmaxAdView.setMediaProgressControlVisibility(false);
+        vmaxAdView.showAd();
 
-        vmaxAdView.cacheAd();
-
+        InitializeRecycler();
 
 
 
