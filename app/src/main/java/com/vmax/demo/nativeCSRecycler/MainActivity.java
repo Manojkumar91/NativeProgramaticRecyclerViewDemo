@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import com.vmax.android.ads.api.VmaxAdView;
 import com.vmax.android.ads.common.VmaxAdListener;
 import com.vmax.android.ads.exception.VmaxAdError;
+import com.vmax.android.ads.util.Constants;
 
 
 /**Its Recommended To Use VMAX plugin For Android Studio To Add Your Dependencies
@@ -38,16 +39,6 @@ public class MainActivity extends Activity {
             public void onAdReady(VmaxAdView vmaxAdView) {
 
 
-                /** Minimum requirements for AdMob templates(wxh dp)
-                Small:  280x80
-                Medium: 280x132
-                Large:  280x250
-                Maxmium limits for AdMob templates(wxh dp)
-                Small:  1200x612
-                Medium: 1200x1200
-                Large:  1200x1200*/
-
-
                 InitializeRecycler();
             }
 
@@ -68,8 +59,18 @@ public class MainActivity extends Activity {
             }
         });
         vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
-        vmaxAdView.setMediaExpandControlVisibility(false);
-        vmaxAdView.setMediaProgressControlVisibility(false);
+        vmaxAdView.setCompositeAdSize(Constants.NativeAdSize.NATIVE_AD_SIZE_FULL_WIDTH,250);
+
+        /** Minimum requirements for AdMob templates(wxh dp)
+         Small:  280x80
+         Medium: 280x132
+         Large:  280x250
+         Maxmium limits for AdMob templates(wxh dp)
+         Small:  1200x612
+         Medium: 1200x1200
+         Large:  1200x1200*/
+
+
         vmaxAdView.showAd();
 
         InitializeRecycler();
