@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     LayoutInflater layoutInflater;
     RecyclerView recyclerView;
     VmaxAdView vmaxAdView;
-   Context c;
+    Context c;
 
 
     @Override
@@ -33,11 +33,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         layoutInflater=(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        vmaxAdView= new VmaxAdView(this,"9060b6e3",VmaxAdView.UX_NATIVE);
+        vmaxAdView= new VmaxAdView(this,"07b26f6b",VmaxAdView.UX_NATIVE);
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
-
+            vmaxAdView.setAdVisibility(Constants.AdVisibility.VISIBLE);
 
                 InitializeRecycler();
             }
@@ -59,13 +59,13 @@ public class MainActivity extends Activity {
             }
         });
         vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
-        vmaxAdView.setCompositeAdSize(Constants.NativeAdSize.NATIVE_AD_SIZE_FULL_WIDTH,250);
+        vmaxAdView.setCompositeAdSize(280,250);
 
         /** Minimum requirements for AdMob templates(wxh dp)
          Small:  280x80
          Medium: 280x132
          Large:  280x250
-         Maxmium limits for AdMob templates(wxh dp)
+         Maximum limits for AdMob templates(wxh dp)
          Small:  1200x612
          Medium: 1200x1200
          Large:  1200x1200*/
@@ -88,6 +88,7 @@ public class MainActivity extends Activity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         RecycleAdapter recycleAdapter=new RecycleAdapter(initData.fillList(),vmaxAdView);
         recyclerView.setAdapter(recycleAdapter);
+
     }
 
 

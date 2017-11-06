@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.vmax.demo.nativeCSRecycler"
+        applicationId "com.myplex.vodafonestaging"
 
         minSdkVersion 15
         targetSdkVersion 24
@@ -15,8 +15,6 @@ android {
     }
     buildTypes {
         release {
-
-
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
