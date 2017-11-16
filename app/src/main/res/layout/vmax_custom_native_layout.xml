@@ -90,7 +90,7 @@
         android:ellipsize="end"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:text="Flurry advertiser name"
+        android:text=""
         android:textColor="#000000"
         android:textSize="8sp" />
 
@@ -102,7 +102,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:scaleType="fitXY"
+
+
             android:id="@+id/vmax_custom_otherimg"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -113,14 +114,14 @@
             android:src="@mipmap/ic_launcher"
             android:visibility="visible" />
 
-        <!--<RelativeLayout-->
-            <!--android:id="@+id/vmax_custom_media_view"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="200dp"-->
-            <!--android:tag="@string/vmax_native_media_layout"-->
-            <!--android:layout_gravity="bottom|center"-->
-            <!--android:gravity="bottom|center"-->
-            <!--/>-->
+        <RelativeLayout
+            android:id="@+id/vmax_custom_media_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:tag="@string/vmax_native_media_layout"
+            android:layout_gravity="bottom|center"
+            android:gravity="bottom|center"
+            />
 
     </RelativeLayout>
     <Button

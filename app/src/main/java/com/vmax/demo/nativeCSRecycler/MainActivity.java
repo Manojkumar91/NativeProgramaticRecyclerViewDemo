@@ -3,16 +3,21 @@ package com.vmax.demo.nativeCSRecycler;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import com.vmax.android.ads.api.VmaxAdView;
 import com.vmax.android.ads.common.VmaxAdListener;
 import com.vmax.android.ads.exception.VmaxAdError;
 import com.vmax.android.ads.util.Constants;
+
+import static java.security.AccessController.getContext;
 
 
 /**Its Recommended To Use VMAX plugin For Android Studio To Add Your Dependencies
@@ -34,6 +39,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         layoutInflater=(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         vmaxAdView= new VmaxAdView(this,"07b26f6b",VmaxAdView.UX_NATIVE);
+
         vmaxAdView.setAdListener(new VmaxAdListener() {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
@@ -58,8 +64,9 @@ public class MainActivity extends Activity {
 
             }
         });
+
         vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
-        vmaxAdView.setCompositeAdSize(280,250);
+        vmaxAdView.setCompositeAdSize(Constants.NativeAdSize.NATIVE_AD_SIZE_FULL_WIDTH,250);
 
         /** Minimum requirements for AdMob templates(wxh dp)
          Small:  280x80
