@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
             @Override
             public void onAdReady(VmaxAdView vmaxAdView) {
 
-
+               vmaxAdView.showAd();
                 InitializeRecycler();
             }
 
@@ -59,19 +59,8 @@ public class MainActivity extends Activity {
             }
         });
         vmaxAdView.setCustomNativeAdContainer((RelativeLayout)layoutInflater.inflate(R.layout.vmax_custom_native_layout,null));
-        vmaxAdView.setCompositeAdSize(Constants.NativeAdSize.NATIVE_AD_SIZE_FULL_WIDTH,250);
 
-        /** Minimum requirements for AdMob templates(wxh dp)
-         Small:  280x80
-         Medium: 280x132
-         Large:  280x250
-         Maxmium limits for AdMob templates(wxh dp)
-         Small:  1200x612
-         Medium: 1200x1200
-         Large:  1200x1200*/
-
-
-        vmaxAdView.showAd();
+        vmaxAdView.cacheAd();
 
         InitializeRecycler();
 

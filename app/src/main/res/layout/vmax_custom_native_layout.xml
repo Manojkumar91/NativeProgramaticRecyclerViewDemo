@@ -91,7 +91,6 @@
         android:tag="@string/vmax_advertiser_name"
         android:layout_marginTop="1sp"
         android:ellipsize="end"
-
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:text="Flurry advertiser name"
@@ -114,7 +113,7 @@
             android:layout_gravity="bottom|center"
             android:gravity="bottom|center"
             android:src="@mipmap/ic_launcher"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <RelativeLayout
             android:id="@+id/vmax_custom_media_view"
