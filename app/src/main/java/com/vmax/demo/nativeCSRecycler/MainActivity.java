@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import com.vmax.android.ads.api.VmaxAdView;
 import com.vmax.android.ads.common.VmaxAdListener;
 import com.vmax.android.ads.exception.VmaxAdError;
-import com.vmax.android.ads.util.Constants;
+
 
 
 /**Its Recommended To Use VMAX plugin For Android Studio To Add Your Dependencies
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
     LayoutInflater layoutInflater;
     RecyclerView recyclerView;
     VmaxAdView vmaxAdView;
-   Context c;
+
 
 
     @Override

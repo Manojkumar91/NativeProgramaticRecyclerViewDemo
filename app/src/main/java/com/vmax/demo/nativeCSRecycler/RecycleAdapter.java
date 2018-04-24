@@ -77,9 +77,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.TheViewH
     @Override
     public void onBindViewHolder(TheViewHolder holder, int position) {
 
+
         if(position%10!=0||position==0)
         {
-            Log.e("position",String.valueOf(position));
             holder.blogImage.setImageDrawable(blogList.get(position).getBlogImage());
             holder.author.setText(blogList.get(position).getAuthor());
             holder.date.setText(blogList.get(position).getDate());
